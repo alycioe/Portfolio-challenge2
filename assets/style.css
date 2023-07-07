@@ -1,0 +1,54 @@
+* {
+    /*tbc*/
+}
+
+body {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.background-image {
+    background-color: rgb(238, 155, 210);
+    background-image: url("floral-bg.jpg");
+    background-repeat: repeat;
+    padding: 50px;
+}
+
+h1 {
+    color: rgb(212, 100, 119);
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav {
+    float:right;
+    text-align:center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.nav:hover {
+    
+}
+
+a:link {
+    color: rgb(212, 100, 119);
+}
+
+a:visited {
+    color: rgb(255, 105, 193);
+}
+
+a:hover {
+    color: rgb(255, 9, 111);
+}
+
+a:active {
+    color: rgb(204, 0, 0);
+}

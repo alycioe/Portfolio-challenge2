@@ -1,10 +1,11 @@
 * {
-    /*tbc*/
+    /* tbc */
 }
 
 body {
     margin: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to bottom right, #fbf3f0, #ff9fab);
 }
 
 .background-image {
@@ -12,6 +13,7 @@ body {
     background-image: url("floral-bg.jpg");
     background-repeat: repeat;
     padding: 50px;
+    border-bottom: solid rgb(212, 100, 119);
 }
 
 h1 {
@@ -20,22 +22,41 @@ h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.nav {
+/* This moves the nav bar text to the right and centers the text, as well as provides spacing */
+
+nav {
     float:right;
     text-align:center;
     margin: 10px;
     padding: 10px;
 }
 
-.nav li {
-    display: inline-block;
+/* adds spacing to the links and displays the nav bars side by side, also adds space and specifies font size */
+
+nav li {
+    display: inline-flex;
     font-size: 20px;
     padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.nav:hover {
-    
+/* The below content allows the nav bars to come into view and gives movement to the boxshadow */
+
+nav ul li a,
+nav ul li a::after,
+nav ul li::before {
+    transition: all .5s;
 }
+
+/* Removes the underline of the link connected to the text and adds a background color for easier visibility */
+
+a {
+    text-decoration: none;
+    background-color: #fbf3f0;
+}
+
+/* All these specify the color of the link before clicked, after clicked, while being hovered over, and active, as well as adds a box shadow and a flower before the text when hovered over */
 
 a:link {
     color: rgb(212, 100, 119);
@@ -47,8 +68,58 @@ a:visited {
 
 a:hover {
     color: rgb(255, 9, 111);
+    box-shadow: 0px 0px 5px 5px rgb(255, 9, 111);
+}
+
+a:hover::before {
+    content: "🌸";
 }
 
 a:active {
     color: rgb(204, 0, 0);
+}
+
+h2 {
+    color: rgb(212, 100, 119);
+    font-size: 25px;
+    display: block;
+    position: absolute;
+}
+
+.about {
+    display: block;
+    position: fixed;
+    flex-wrap: wrap;
+    width: 25%;
+    height: auto;
+    float: left;
+    border: dashed rgb(212, 100, 119);
+    color:  rgb(212, 100, 119);
+    background-color:#fbf3f0;
+    padding: 15px;
+    margin: 40px 20px;
+}
+
+.about .me img {
+    position: flex;
+    max-width: 200px;
+    max-height: 210px;
+    border: dotted;
+    margin: 0px auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.about h2 {
+    display: block;
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+    height: auto;
+    border: solid;
+    padding: 0px 5px;
+    background-color: #fbf3f0;
 }
